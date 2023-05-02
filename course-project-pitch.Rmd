@@ -1,0 +1,58 @@
+---
+title: 'R Shiny App: Global Happiness Index Distribution'
+author: "Anne Strader"
+date: "2023-05-01"
+output: ioslides_presentation
+---
+
+<style>
+pre {
+  font-size: 14px;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+- The objective of this Shiny app is to visualize the distribution of Happiness Index scores and rankings by country.
+- Happiness index data for 2018 and 2019 are available.
+- In addition to the overall happiness scores/rankings, the user can view scores from components used to calculate the happiness index:
+    - GDP per capita
+    - social support
+    - healthy life expectancy
+    - freedom to make life choices
+    - generosity
+    - perceptions of corruption
+
+## Dataset
+
+- The global happiness index dataset provides the following information:
+    - country/region name
+    - year for which happiness index was calculated (2018 or 2019)
+    - happiness index ranking and score
+    - scores of components used to calculate happiness score
+    
+```{r, load_data, echo = FALSE}
+happiness.data <- read.csv("./Happiness-Index/data/report_2018-2019.csv", 
+                           col.names = c("rank", "region", "year", 
+                                         "score", "GDP", "social", "life", 
+                                         "choices", "generosity", "corruption"))
+```
+    
+```{r, show_data, echo = TRUE}
+head(happiness.data)
+```
+
+## How to Use App
+
+- Select score to display from the dropdown menu.
+- Select year from which results will be displayed by clicking on the corresponding button.
+- Select how many top-ranked countries for specified category and year to list by using the numeric input box.
+
+## Links to App, Code
+
+- The app can be found [here](https://anne-strader.shinyapps.io/Global-Happiness-Index/).
+- All code is available at my [Github repository](https://github.com/seismostrader/Coursera-Developing-Data-Products-course-project).

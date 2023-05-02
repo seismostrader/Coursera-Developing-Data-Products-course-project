@@ -1,0 +1,13 @@
+name: Global-Happiness-Index
+title: Global-Happiness-Index
+username:
+account: anne-strader
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9007638
+bundleId: 7163183
+url: https://anne-strader.shinyapps.io/Global-Happiness-Index/
+when: 1683024580.45333
+lastSyncTime: 1683024580.45335
+asMultiple: FALSE
+asStatic: FALSE
